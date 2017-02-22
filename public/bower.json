@@ -1,0 +1,14 @@
+{
+  "name": "public",
+  "authors": [
+    "blwasham <bryanwasham@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.6.2"
+  }
+}

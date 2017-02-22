@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>JWT Example</title>
+</head>
+<body ng-controller="MainCtrl as vm">
+  <form ng-submit="vm.login(vm.username, vm.password)">
+    <label>Username: <input type="text" ng-model="vm.username" /></label><br/>
+    <label>Password: <input type="password" ng-model="vm.password" /></label><br/>
+    <button type="submit">Login</button>
+  </form>
+
+  <div>
+    <h1>Welcome {{vm.user.username}}</h1>
+    <button ng-click="vm.logout()">Logout</button>
+    <br/>
+    <h2>Get Random User</h2>
+    <button ng-click="vm.getRandomUser()">Get User</button>
+    <pre>{{ vm.randomUser | json }}</pre>
+  </div>
+<script src="bower_components/angular/angular.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
