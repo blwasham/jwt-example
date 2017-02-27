@@ -21,7 +21,7 @@
     });
 
     function getRandomUser() {
-      RandomUserFactory.getUser().then(function success(response) {
+      RandomUserFactory.getRandomUser().then(function success(response) {
         vm.randomUser = response.data;
       }, handleError);
     }
@@ -29,7 +29,6 @@
     function login(username, password) {
       UserFactory.login(username, password).then(function success(response) {
         vm.user = response.data.user;
-        console.log('Token: ', response.data.token);
       }, handleError);
     }
 
@@ -71,7 +70,6 @@
         username: username,
         password: password
       }).then(function success(response) {
-        console.log('response',response.data.token);
         AuthTokenFactory.setToken(response.data.token);
         return response;
       });
